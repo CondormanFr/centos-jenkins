@@ -14,4 +14,4 @@ ENV JENKINS_HOME /opt/data/jenkins_home
 
 EXPOSE 8080
 
-CMD java -Xms512 -Xmx1024 -jar /opt/jenkins/jenkins.jar
+CMD java -Xms512m -Xmx1024m -jar /opt/jenkins/jenkins.jar
