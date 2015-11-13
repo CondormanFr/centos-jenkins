@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum -y install java-1.8.0-openjdk
+RUN yum -y install java-1.8.0-openjdk git
 
 ENV JENKINS_VERSION 1.636
 ENV JENKINS_SHA 7c671378735106d87203005b9d03cde8df9981a9
