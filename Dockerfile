@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum -y install java-1.8.0-openjdk git
 
 ENV JENKINS_VERSION 1.638
-ENV JENKINS_SHA 8bed53c7309e46cb921d54cdbf41b254f1eaff88
+ENV JENKINS_SHA 7f494be16a8769d089651b8c8205b85e34f2c9cc
 
 RUN mkdir /opt/jenkins && \
     mkdir -p /opt/data/jenkins/war && \
