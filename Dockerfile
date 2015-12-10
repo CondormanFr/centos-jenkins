@@ -1,5 +1,7 @@
 FROM centos:7
 
+MAINTAINER SDiedel <stefan@diedel.net>
+
 RUN yum -y install java-1.8.0-openjdk git
 
 ENV JENKINS_VERSION 1.638
