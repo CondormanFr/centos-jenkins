@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER Romain Gouyet <github@gouyet.com>
 
-RUN yum -y install java-1.8.0-openjdk git mercurial
+RUN yum -y install java-1.8.0-openjdk git mercurial mc subversion
 
 
 ENV JENKINS_VERSION 2.46.2
