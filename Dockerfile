@@ -1,15 +1,16 @@
 FROM centos:7
 
-MAINTAINER SDiedel <stefan@diedel.net>
+MAINTAINER Romain Gouyet <github@gouyet.com>
 
-RUN yum -y install java-1.8.0-openjdk git
+RUN yum -y install java-1.8.0-openjdk git mercurial
 
-ENV JENKINS_VERSION 1.638
-ENV JENKINS_SHA 7f494be16a8769d089651b8c8205b85e34f2c9cc
+
+ENV JENKINS_VERSION 2.46.2
+ENV JENKINS_SHA b91fa09838342980f56224adcf5f02edf668d834
 
 RUN mkdir /opt/jenkins && \
     mkdir -p /opt/data/jenkins/war && \
-    curl -fL http://mirrors.jenkins-ci.org/war/$JENKINS_VERSION/jenkins.war --output /opt/jenkins/jenkins.jar && \
+    curl -fL https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/$JENKINS_VERSION/jenkins-war-$JENKINS_VERSION.war   --output /opt/jenkins/jenkins.jar && \
     echo "$JENKINS_SHA /opt/jenkins/jenkins.jar" | sha1sum -c -
 
 ENV JENKINS_HOME /opt/data/jenkins_home
